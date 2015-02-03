@@ -68,9 +68,16 @@ namespace ConAppWithDB
 				}
 
 			}
-			catch (Exception ex)
+			catch (Exception ex) //need to add more granural exceprion rathen than generic 
 			{
-				Console.WriteLine(ex.Message);
+				if (ex is SqlException)
+				{
+					Console.WriteLine("Sql exception, details: {0}", ex.StackTrace);
+				}
+				else
+				{
+					Console.WriteLine(ex.Message);
+				}
 			}
 			finally
 			{
