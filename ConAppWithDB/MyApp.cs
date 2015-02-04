@@ -88,7 +88,7 @@ namespace ConAppWithDB
 		public static void RunWithDataSet()
 		{
 			Console.WriteLine("\nStarting method: " + MethodBase.GetCurrentMethod().Name);
-			//need to find a better way of retrieving connString
+			//need to find a better way of retrieving connString / ConfigurationManager
 			String connString = "Data Source = ksTestDb.sdf; Password = krisland";
 			SqlCeConnection conn = new SqlCeConnection(connString);
 
